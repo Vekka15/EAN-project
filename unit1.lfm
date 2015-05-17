@@ -1,0 +1,513 @@
+object Form1: TForm1
+  Left = 980
+  Height = 591
+  Top = 171
+  Width = 693
+  Caption = 'Rownania liniowe'
+  ClientHeight = 591
+  ClientWidth = 693
+  LCLVersion = '1.2.6.0'
+  object Edit1: TEdit
+    Left = 72
+    Height = 28
+    Top = 120
+    Width = 88
+    TabOrder = 0
+  end
+  object Akceptuj: TButton
+    Left = 48
+    Height = 25
+    Top = 288
+    Width = 75
+    Caption = 'Akceptuj'
+    OnClick = AkceptujClick
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 463
+    Height = 20
+    Top = 120
+    Width = 8
+    Caption = '1'
+    ParentColor = False
+    Visible = False
+  end
+  object Label2: TLabel
+    Left = 470
+    Height = 20
+    Top = 120
+    Width = 3
+    Caption = ';'
+    ParentColor = False
+    Visible = False
+  end
+  object Label3: TLabel
+    Left = 478
+    Height = 20
+    Top = 120
+    Width = 8
+    Caption = '1'
+    ParentColor = False
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 456
+    Height = 20
+    Top = 120
+    Width = 5
+    Caption = '['
+    ParentColor = False
+    Visible = False
+  end
+  object Label5: TLabel
+    Left = 490
+    Height = 20
+    Top = 120
+    Width = 5
+    Caption = ']'
+    ParentColor = False
+    Visible = False
+  end
+  object Edit2: TEdit
+    Left = 512
+    Height = 28
+    Top = 112
+    Width = 33
+    TabOrder = 2
+    Visible = False
+  end
+  object Zatwierdz: TButton
+    Left = 560
+    Height = 26
+    Top = 112
+    Width = 84
+    Caption = 'Zatwierdz'
+    OnClick = ZatwierdzClick
+    TabOrder = 3
+    Visible = False
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 408
+    Width = 75
+    Caption = 'Reset'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object Label6: TLabel
+    Left = 408
+    Height = 20
+    Top = 80
+    Width = 136
+    Caption = 'Dane - symetryczna::'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 240
+    Height = 20
+    Top = 24
+    Width = 154
+    Caption = 'Wprowadzanie danych:'
+    ParentColor = False
+  end
+  object RadioButton1: TRadioButton
+    Left = 40
+    Height = 24
+    Top = 168
+    Width = 191
+    Caption = 'MACIERZ SYMETRYCZNA'
+    TabOrder = 5
+  end
+  object RadioButton2: TRadioButton
+    Left = 40
+    Height = 24
+    Top = 207
+    Width = 218
+    Caption = 'MACIERZ TRÓJDIAGONALNA'
+    TabOrder = 6
+  end
+  object Label8: TLabel
+    Left = 408
+    Height = 20
+    Top = 232
+    Width = 150
+    Caption = 'Dane - trójdiagonalna:'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 368
+    Height = 20
+    Top = 120
+    Width = 69
+    Caption = 'Macierz A:'
+    ParentColor = False
+    Visible = False
+  end
+  object Label10: TLabel
+    Left = 372
+    Height = 20
+    Top = 280
+    Width = 65
+    Caption = 'Wektor A:'
+    ParentColor = False
+    Visible = False
+  end
+  object Label11: TLabel
+    Left = 373
+    Height = 20
+    Top = 312
+    Width = 64
+    Caption = 'Wektor B:'
+    ParentColor = False
+    Visible = False
+  end
+  object Label12: TLabel
+    Left = 372
+    Height = 20
+    Top = 344
+    Width = 64
+    Caption = 'Wektor C:'
+    ParentColor = False
+    Visible = False
+  end
+  object Button2: TButton
+    Left = 552
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Zatwierdz'
+    OnClick = Button2Click
+    TabOrder = 7
+    Visible = False
+  end
+  object Label13: TLabel
+    Left = 463
+    Height = 20
+    Top = 280
+    Width = 8
+    Caption = '0'
+    ParentColor = False
+    Visible = False
+  end
+  object Label14: TLabel
+    Left = 470
+    Height = 20
+    Top = 280
+    Width = 3
+    Caption = ';'
+    ParentColor = False
+    Visible = False
+  end
+  object Label15: TLabel
+    Left = 478
+    Height = 20
+    Top = 280
+    Width = 8
+    Caption = '0'
+    ParentColor = False
+    Visible = False
+  end
+  object Label16: TLabel
+    Left = 456
+    Height = 20
+    Top = 280
+    Width = 5
+    Caption = '['
+    ParentColor = False
+    Visible = False
+  end
+  object Label17: TLabel
+    Left = 490
+    Height = 20
+    Top = 280
+    Width = 5
+    Caption = ']'
+    ParentColor = False
+    Visible = False
+  end
+  object Label18: TLabel
+    Left = 463
+    Height = 20
+    Top = 312
+    Width = 8
+    Caption = '0'
+    ParentColor = False
+    Visible = False
+  end
+  object Label19: TLabel
+    Left = 470
+    Height = 20
+    Top = 312
+    Width = 3
+    Caption = ';'
+    ParentColor = False
+    Visible = False
+  end
+  object Label20: TLabel
+    Left = 478
+    Height = 20
+    Top = 312
+    Width = 8
+    Caption = '1'
+    ParentColor = False
+    Visible = False
+  end
+  object Label21: TLabel
+    Left = 456
+    Height = 20
+    Top = 312
+    Width = 5
+    Caption = '['
+    ParentColor = False
+    Visible = False
+  end
+  object Label22: TLabel
+    Left = 490
+    Height = 20
+    Top = 312
+    Width = 5
+    Caption = ']'
+    ParentColor = False
+    Visible = False
+  end
+  object Label23: TLabel
+    Left = 463
+    Height = 20
+    Top = 344
+    Width = 8
+    Caption = '1'
+    ParentColor = False
+    Visible = False
+  end
+  object Label24: TLabel
+    Left = 470
+    Height = 20
+    Top = 344
+    Width = 3
+    Caption = ';'
+    ParentColor = False
+    Visible = False
+  end
+  object Label25: TLabel
+    Left = 478
+    Height = 20
+    Top = 344
+    Width = 8
+    Caption = '0'
+    ParentColor = False
+    Visible = False
+  end
+  object Label26: TLabel
+    Left = 456
+    Height = 20
+    Top = 344
+    Width = 5
+    Caption = '['
+    ParentColor = False
+    Visible = False
+  end
+  object Label27: TLabel
+    Left = 490
+    Height = 20
+    Top = 344
+    Width = 5
+    Caption = ']'
+    ParentColor = False
+    Visible = False
+  end
+  object Edit3: TEdit
+    Left = 512
+    Height = 28
+    Top = 272
+    Width = 32
+    TabOrder = 8
+    Visible = False
+  end
+  object Edit4: TEdit
+    Left = 512
+    Height = 28
+    Top = 304
+    Width = 32
+    TabOrder = 9
+    Visible = False
+  end
+  object Edit5: TEdit
+    Left = 512
+    Height = 28
+    Top = 336
+    Width = 32
+    TabOrder = 10
+    Visible = False
+  end
+  object Button3: TButton
+    Left = 552
+    Height = 25
+    Top = 306
+    Width = 75
+    Caption = 'Zatwierdz'
+    OnClick = Button3Click
+    TabOrder = 11
+    Visible = False
+  end
+  object Button4: TButton
+    Left = 552
+    Height = 25
+    Top = 339
+    Width = 75
+    Caption = 'Zatwierdz'
+    OnClick = Button4Click
+    TabOrder = 12
+    Visible = False
+  end
+  object Label28: TLabel
+    Left = 372
+    Height = 20
+    Top = 160
+    Width = 99
+    Caption = 'Wyrazy wolne: '
+    ParentColor = False
+    Visible = False
+  end
+  object Edit6: TEdit
+    Left = 514
+    Height = 28
+    Top = 152
+    Width = 32
+    TabOrder = 13
+    Visible = False
+  end
+  object Label29: TLabel
+    Left = 476
+    Height = 20
+    Top = 160
+    Width = 5
+    Caption = '['
+    ParentColor = False
+    Visible = False
+  end
+  object Label30: TLabel
+    Left = 482
+    Height = 20
+    Top = 160
+    Width = 8
+    Caption = '1'
+    ParentColor = False
+    Visible = False
+  end
+  object Label31: TLabel
+    Left = 491
+    Height = 20
+    Top = 160
+    Width = 5
+    Caption = ']'
+    ParentColor = False
+    Visible = False
+  end
+  object Button5: TButton
+    Left = 569
+    Height = 25
+    Top = 155
+    Width = 75
+    Caption = 'Zatwierdź'
+    OnClick = Button5Click
+    TabOrder = 14
+    Visible = False
+  end
+  object Label32: TLabel
+    Left = 368
+    Height = 20
+    Top = 381
+    Width = 99
+    Caption = 'Wyrazy wolne: '
+    ParentColor = False
+    Visible = False
+  end
+  object Edit7: TEdit
+    Left = 513
+    Height = 28
+    Top = 376
+    Width = 32
+    TabOrder = 15
+    Visible = False
+  end
+  object Label33: TLabel
+    Left = 472
+    Height = 20
+    Top = 381
+    Width = 5
+    Caption = '['
+    ParentColor = False
+    Visible = False
+  end
+  object Label34: TLabel
+    Left = 478
+    Height = 20
+    Top = 381
+    Width = 8
+    Caption = '0'
+    ParentColor = False
+    Visible = False
+  end
+  object Label35: TLabel
+    Left = 487
+    Height = 20
+    Top = 381
+    Width = 5
+    Caption = ']'
+    ParentColor = False
+    Visible = False
+  end
+  object Button6: TButton
+    Left = 552
+    Height = 25
+    Top = 376
+    Width = 75
+    Caption = 'Zatwierdź'
+    OnClick = Button6Click
+    TabOrder = 16
+    Visible = False
+  end
+  object CheckBox1: TCheckBox
+    Left = 40
+    Height = 24
+    Top = 248
+    Width = 176
+    Caption = 'ARYT. PRZEDZIALOWA'
+    TabOrder = 17
+  end
+  object Button7: TButton
+    Left = 48
+    Height = 52
+    Top = 328
+    Width = 172
+    Caption = 'LICZ'
+    OnClick = Button7Click
+    TabOrder = 18
+  end
+  object Label36: TLabel
+    Left = 64
+    Height = 20
+    Top = 80
+    Width = 98
+    Caption = 'Liczba równań:'
+    ParentColor = False
+  end
+  object Label37: TLabel
+    Left = 478
+    Height = 20
+    Top = 24
+    Width = 52
+    Caption = 'Label37'
+    ParentColor = False
+  end
+  object StringGrid1: TStringGrid
+    Left = 112
+    Height = 100
+    Top = 472
+    Width = 408
+    FixedCols = 0
+    RowCount = 2
+    TabOrder = 19
+  end
+end
